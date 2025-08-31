@@ -1,0 +1,49 @@
+{
+  "name": "document-converter-mcp-server",
+  "version": "1.0.0",
+  "description": "MCP server for document conversion with Streamable HTTP, SSE, and Stdio support",
+  "type": "module",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/index.js",
+    "start:stdio": "node dist/stdio-server.js",
+    "dev": "tsx src/index.ts",
+    "dev:stdio": "tsx src/stdio-server.ts",
+    "clean": "rimraf dist",
+    "prepare": "npm run build"
+  },
+  "keywords": [
+    "mcp",
+    "document-conversion",
+    "streamable-http",
+    "sse",
+    "stdio"
+  ],
+  "author": "Document Converter MCP",
+  "license": "MIT",
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^0.5.0",
+    "express": "^4.18.2",
+    "cors": "^2.8.5"
+  },
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "@types/express": "^4.17.17",
+    "@types/cors": "^2.8.13",
+    "typescript": "^5.0.0",
+    "tsx": "^4.0.0",
+    "rimraf": "^5.0.0"
+  },
+  "optionalDependencies": {
+    "marked": "^9.0.0",
+    "turndown": "^7.1.2",
+    "puppeteer": "^21.0.0",
+    "officegen": "^0.6.5",
+    "mammoth": "^1.6.0",
+    "pdf-parse": "^1.1.1"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}
